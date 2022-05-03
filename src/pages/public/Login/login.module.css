@@ -1,0 +1,144 @@
+.Login {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1rem;
+	width: 30%;
+	margin: auto;
+	height: 100%;
+	& .titleSignIn {
+		font-size: 2.5rem;
+		font-weight: 900;
+		font-style: italic;
+		margin-bottom: 1rem;
+		text-align: center;
+		margin-bottom: 5rems;
+	}
+	& .providersLogin {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		& .provider {
+			border: 1px solid var(--text);
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 1rem;
+			padding: 0.5rem 1rem;
+			box-sizing: border-box;
+			border-radius: 0.5rem;
+			& img {
+				width: 1.5rem;
+				height: auto;
+			}
+			& a {
+				text-decoration: none;
+				color: var(--text);
+				font-weight: 600;
+			}
+		}
+	}
+	& .orLogin {
+		text-align: center;
+		color: var(--secondary);
+	}
+	& .formSignIn {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		& label {
+			width: 100%;
+			& input {
+				width: 100%;
+				border-radius: 0.5rem;
+				border: 1px solid var(--text);
+				padding: 1rem 0.5rem;
+				background-color: transparent;
+				box-sizing: border-box;
+				font-size: 1rem;
+				color: var(--primary);
+				&:focus {
+					outline: none;
+				}
+				&::placeholder {
+					color: var(--text);
+					opacity: 0.8;
+				}
+			}
+		}
+		& button {
+			border: none;
+			padding: 1rem 1.5rem;
+			border-radius: 1rem;
+			color: var(--text);
+			font-weight: bold;
+			font-size: 1rem;
+			background: linear-gradient(180deg, var(--primary), var(--secondary));
+		}
+	}
+	& p {
+		font-size: 1rem;
+		margin: 0;
+		text-align: center;
+
+		& span {
+			color: var(--text);
+			opacity: 0.8;
+			margin-right: 0.5rem;
+		}
+		& a {
+			text-decoration: none;
+			color: var(--text);
+			font-weight: 900;
+			font-style: italic;
+		}
+	}
+}
+
+.bolSign {
+	position: absolute;
+	width: 160px;
+	height: 160px;
+	background: linear-gradient(to right, var(--primary), var(--secondary));
+	border-radius: 50%;
+	top: -4rem;
+	left: 10%;
+	animation: move-sign infinite 7s ease-in-out;
+}
+
+.bolIn {
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	background: linear-gradient(90deg, #242424, var(--black));
+	border-radius: 50%;
+	top: 10%;
+	right: 20%;
+	animation: move-in infinite 10s ease-in-out;
+}
+
+@keyframes move-in {
+	0% {
+		transform: translateY(40px) translateX(4px);
+	}
+	50% {
+		transform: translateY(0px) translateX(0px);
+	}
+	100% {
+		transform: translateY(40px) translateX(4px);
+	}
+}
+
+@keyframes move-sign {
+	0% {
+		transform: translateX(20px);
+	}
+	50% {
+		transform: translateX(0px);
+	}
+	100% {
+		transform: translateX(20px);
+	}
+}

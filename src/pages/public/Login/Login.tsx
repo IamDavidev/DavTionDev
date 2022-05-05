@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import styles from './login.module.css';
 import { googleAuth } from '../../../lib/auth/google.auth';
+import { githubAuth } from '../../../lib/auth/github.auth';
 
 function Login() {
 	return (
@@ -21,6 +22,7 @@ function Login() {
 						</p>
 					</button>
 					<button
+						onClick={githubAuth}
 						className={`${styles.provider} ${styles.providerGithub || ''}`}>
 						<img src='/github.png' alt='Github' />
 						<p>

@@ -1,20 +1,19 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client';
-import { userState } from './state';
+import { taskStateVar, userStateClient } from './state';
 
 export const client = new ApolloClient({
-	uri: 'http://localhost:4000/graphql',
 	cache: new InMemoryCache({
 		typePolicies: {
 			Query: {
 				fields: {
-					user: {
+					userDev: {
 						read() {
-							return userState;
+							return userStateClient();
 						},
 					},
-					tasks: {
+					taskDev: {
 						read() {
-							return null;
+							return taskStateVar();
 						},
 					},
 				},

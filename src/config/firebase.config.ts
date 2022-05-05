@@ -26,4 +26,5 @@ export const appFirebase = initializeApp(firebaseconfig);
 
 export const authFirebase = getAuth();
 
-export const analytics = getAnalytics(appFirebase);
+// export const analytics = getAnalytics(appFirebase);
+// no funcion si tiene bloqueo de anucios

@@ -4,14 +4,14 @@ export interface StateUserInterface {
 }
 
 export type userStateType = {
-	id: string;
-	_uid: string;
-	name: string;
-	email: string;
-	photoURL: string;
-	_token: string;
+	id?: string | null;
+	_uid: string | null;
+	name: string | null;
+	email: string | null;
+	photoURL: string | null;
+	_token: string | undefined;
 	isLoggedIn: boolean;
-	lastLogin: string;
+	lastLogin: string | undefined;
 };
 
 export interface StateTaskInterface {

@@ -1,11 +1,12 @@
 import { FC } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import Tasks from '../pages/private/Tasks/Tasks';
 
 const PrivateRoutes: FC = () => {
 	return (
 		<Routes>
 			<Route path='*' element={<Navigate to='/tareas' replace />} />
-			<Route path='/tareas' element={<p> tareas</p>} />
+			<Route path='/tareas' element={<Tasks />} />
 		</Routes>
 	);
 };

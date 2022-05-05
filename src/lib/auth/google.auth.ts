@@ -2,6 +2,8 @@ import {
 	signInWithPopup,
 	GoogleAuthProvider,
 	fetchSignInMethodsForEmail,
+	setPersistence,
+	browserLocalPersistence,
 } from 'firebase/auth';
 import { GoogleProvider } from '../providers/firebase.providers';
 import { authFirebase } from '../../config/firebase.config';
@@ -26,10 +28,12 @@ export const googleAuth = () => {
 				isLoggedIn: true,
 				lastLogin: metadata.lastSignInTime,
 			};
-
-			return userStateClient({
-				isAuthenticated: true,
-				user,
+			return setPersistence(authFirebase, browserLocalPersistence).then(() => {
+				userStateClient({
+					...userStateClient,
+					isAuthenticated: true,
+					user: user,
+				});
 			});
 		})
 		.catch(err => {

@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import styles from './login.module.css';
 import { googleAuth } from '../../../lib/auth/google.auth';
-import { githubAuth } from '../../../lib/auth/github.auth';
 
 function Login() {
 	return (
@@ -14,14 +13,14 @@ function Login() {
 				<h2 className={styles.titleSignIn}>Iniciar Sesión</h2>
 				<div className={styles.providersLogin}>
 					<button
-						onClick={() => googleAuth()}
+						onClick={googleAuth}
 						className={`${styles.provider} ${styles.providerGoogle || ''}`}>
 						<img src='/google.png' alt='Google' />
 						<p>
 							Continuar con <span>Google</span>
 						</p>
 					</button>
-					<button
+					{/* <button
 						onClick={githubAuth}
 						className={`${styles.provider} ${styles.providerGithub || ''}`}>
 						<img src='/github.png' alt='Github' />
@@ -35,7 +34,7 @@ function Login() {
 						<p>
 							Continuar con <span>Twitter</span>
 						</p>
-					</button>
+					</button> */}
 				</div>
 				<span className={styles.orLogin}> or</span>
 				<form className={styles.formSignIn}>

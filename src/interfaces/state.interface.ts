@@ -9,7 +9,7 @@ export type userStateType = {
 	name: string | null;
 	email: string | null;
 	photoURL: string | null;
-	_token: string | undefined;
+	_token?: string | undefined;
 	isLoggedIn: boolean;
 	lastLogin: string | undefined;
 };

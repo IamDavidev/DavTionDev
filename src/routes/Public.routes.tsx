@@ -1,14 +1,14 @@
 import { FC } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import Lading from '../pages/public/LandingPage/LandingPage';
 import Login from '../pages/public/Login/Login';
+
+// const Login = lazy(() => import('../pages/public/Login/Login'));
 
 const PublicRoutes: FC = () => {
 	return (
 		<Routes>
-			<Route
-				path='/'
-				element={<Link to='/iniciar/sesion'>iniciar sesión</Link>}
-			/>
+			<Route path='/' element={<Lading />} />
 			<Route path='/iniciar/sesion' element={<Login />} />
 			<Route path='*' element={<p>404</p>} />
 			<Route path='/crear/cuenta' element={<p> crear cuenta</p>} />

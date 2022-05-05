@@ -1,5 +1,7 @@
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import styles from './login.module.css';
+import { googleAuth } from '../../../lib/auth/google.auth';
 
 function Login() {
 	return (
@@ -10,24 +12,28 @@ function Login() {
 			<div className={styles.Login}>
 				<h2 className={styles.titleSignIn}>Iniciar Sesión</h2>
 				<div className={styles.providersLogin}>
-					<div className={`${styles.provider} ${styles.providerGoogle}`}>
+					<button
+						onClick={() => googleAuth()}
+						className={`${styles.provider} ${styles.providerGoogle || ''}`}>
 						<img src='/google.png' alt='Google' />
-						<a href='#'>
+						<p>
 							Continuar con <span>Google</span>
-						</a>
-					</div>
-					<div className={`${styles.provider} ${styles.providerGithub}`}>
+						</p>
+					</button>
+					<button
+						className={`${styles.provider} ${styles.providerGithub || ''}`}>
 						<img src='/github.png' alt='Github' />
-						<a href='#'>
+						<p>
 							Continuar con <span>Github</span>
-						</a>
-					</div>
-					<div className={`${styles.provider} ${styles.provideLinkedin}`}>
-						<img src='/linkedin.png' alt='Linkedin' />
-						<a href='#'>
-							Continuar con <span>Linkedin</span>
-						</a>
-					</div>
+						</p>
+					</button>
+					<button
+						className={`${styles.provider} ${styles.provideTwitter || ''}`}>
+						<img src='/twitter.png' alt='Twitter' />
+						<p>
+							Continuar con <span>Twitter</span>
+						</p>
+					</button>
 				</div>
 				<span className={styles.orLogin}> or</span>
 				<form className={styles.formSignIn}>
@@ -42,13 +48,13 @@ function Login() {
 					</label>
 					<button className='btnSingIn'>Iniciar Sesión</button>
 				</form>
-				<p className='registerLogin'>
+				<p className={styles.forgotPasswordLogin}>
 					<span>¿No tienes una cuenta?</span>
-					<a href='#'>Registrate</a>
+					<Link to='/cuenta/registro'>Registrate</Link>
 				</p>
-				<p className='forgotPasswordLogin'>
+				<p className={styles.forgotPasswordLogin}>
 					<span>¿Olvidaste tu contraseña?</span>
-					<a href='#'>Recuperar</a>
+					<Link to='/recuperar/contrasena'>Recuperar</Link>
 				</p>
 			</div>
 			<div className={styles.bolSign}></div>

@@ -20,29 +20,36 @@
 		flex-direction: column;
 		gap: 1rem;
 		& .provider {
-			border: 1px solid var(--text);
+			border: 2px solid var(--text);
+			background-color: transparent;
 			text-align: center;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			gap: 1rem;
-			padding: 0.5rem 1rem;
 			box-sizing: border-box;
+			font-family: 'Source Sans Pro', sans-serif;
 			border-radius: 0.5rem;
+			cursor: pointer;
 			& img {
 				width: 1.5rem;
 				height: auto;
 			}
-			& a {
+			& p {
 				text-decoration: none;
+				font-size: 1rem;
 				color: var(--text);
 				font-weight: 600;
+				& span {
+					font-weight: bold;
+					color: var(--text);
+				}
 			}
 		}
 	}
 	& .orLogin {
 		text-align: center;
-		color: var(--secondary);
+		color: var(--primary);
 	}
 	& .formSignIn {
 		display: flex;
@@ -53,18 +60,18 @@
 			& input {
 				width: 100%;
 				border-radius: 0.5rem;
-				border: 1px solid var(--text);
+				border: 2px solid var(--text);
 				padding: 1rem 0.5rem;
 				background-color: transparent;
 				box-sizing: border-box;
 				font-size: 1rem;
-				color: var(--primary);
+				color: var(--text);
 				&:focus {
 					outline: none;
 				}
 				&::placeholder {
 					color: var(--text);
-					opacity: 0.8;
+					opacity: 0.6;
 				}
 			}
 		}
@@ -78,11 +85,11 @@
 			background: linear-gradient(180deg, var(--primary), var(--secondary));
 		}
 	}
-	& p {
+	& .forgotPasswordLogin,
+	&.registerLogin {
 		font-size: 1rem;
 		margin: 0;
 		text-align: center;
-
 		& span {
 			color: var(--text);
 			opacity: 0.8;

@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Lading from '../pages/public/LandingPage/LandingPage';
-import Login from '../pages/public/Login/Login';
+import Lading from '../pages/public/LandingPage/Landing.page';
+import Login from '../pages/public/Login/Login.page';
 
 // const Login = lazy(() => import('../pages/public/Login/Login'));
 

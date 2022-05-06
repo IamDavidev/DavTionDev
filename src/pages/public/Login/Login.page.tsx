@@ -20,21 +20,6 @@ function Login() {
 							Continuar con <span>Google</span>
 						</p>
 					</button>
-					{/* <button
-						onClick={githubAuth}
-						className={`${styles.provider} ${styles.providerGithub || ''}`}>
-						<img src='/github.png' alt='Github' />
-						<p>
-							Continuar con <span>Github</span>
-						</p>
-					</button>
-					<button
-						className={`${styles.provider} ${styles.provideTwitter || ''}`}>
-						<img src='/twitter.png' alt='Twitter' />
-						<p>
-							Continuar con <span>Twitter</span>
-						</p>
-					</button> */}
 				</div>
 				<span className={styles.orLogin}> or</span>
 				<form className={styles.formSignIn}>

@@ -1,7 +1,7 @@
 import { useQuery } from '@apollo/client';
 import { FC, useState } from 'react';
 
-import Navbar from '../../layouts/Nabar/Navbar';
+import Navbar from '../../layouts/Nabar/Navbar.layout';
 import CardTask from '../../../components/CardTask/CardTask';
 import ModalTask from '../../layouts/ModalTask/modalTask.layout';
 import { GET_TASKS } from '../../../gql/getTasks.gql';

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Tasks from '../pages/private/Tasks/Tasks';
+import Tasks from '../pages/private/Tasks/Tasks.page';
 
 const PrivateRoutes: FC = () => {
 	return (

@@ -20,7 +20,6 @@ export function getOnAuthUser({ setLoading, setIsLoggedIn }: any) {
 			lastLogin: metadata.lastSignInTime,
 		};
 
-		console.log('>> ejecutando useEffect');
 		setLoading(false);
 		setIsLoggedIn(true);
 

@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { getOnAuthUser } from './lib/services/getOnAtuthUser';
 
 // routes
-import Loading from './pages/layouts/Loading/Loading';
+import Loading from './pages/layouts/Loading/Loading.layout';
 import PrivateRoutes from './routes/Private.routes';
 import PublicRoutes from './routes/Public.routes';
 

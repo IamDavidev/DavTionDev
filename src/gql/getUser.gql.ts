@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 
 export const GET_USER = gql`
 	query GetStateDavtion {
-		userDev @client {
+		UserClient @client {
 			user {
 				name
 				email

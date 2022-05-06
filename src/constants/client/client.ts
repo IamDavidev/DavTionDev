@@ -8,7 +8,7 @@ export const client = new ApolloClient({
 		typePolicies: {
 			Query: {
 				fields: {
-					userDev: {
+					UserClient: {
 						read() {
 							return userStateClient();
 						},

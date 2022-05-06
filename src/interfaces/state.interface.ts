@@ -9,6 +9,7 @@ export type userStateType = {
 	name: string | null;
 	email: string | null;
 	photoURL: string | null;
+	date?: Date | null;
 	_token?: string | undefined;
 	isLoggedIn: boolean;
 	lastLogin: string | undefined;
@@ -19,6 +20,7 @@ export interface StateTaskInterface {
 }
 
 export type taskType = {
+	_uid: string | null;
 	title: string;
 	createdAt: string;
 	description: string;

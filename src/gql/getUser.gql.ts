@@ -7,6 +7,9 @@ export const GET_USER = gql`
 				name
 				email
 				_token
+				photoURL
+				lastLogin
+				_uid
 			}
 			isAuthenticated
 		}

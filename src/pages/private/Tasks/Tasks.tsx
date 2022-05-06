@@ -1,12 +1,41 @@
-import { FC } from 'react';
-import Navbar from '../../layouts/Navbar';
+import { useQuery } from '@apollo/client';
+import { FC, useState } from 'react';
+
+import Navbar from '../../layouts/Nabar/Navbar';
+import CardTask from '../../../components/CardTask/CardTask';
+import ModalTask from '../../layouts/ModalTask/modalTask.layout';
+import { GET_TASKS } from '../../../gql/getTasks.gql';
 
 const Tasks: FC = () => {
+	const [modal, setModal] = useState(false);
+	const { data } = useQuery(GET_TASKS);
+
+	const Tasks = data.TasksClient.tasks;
+
 	return (
 		<div>
 			<Navbar />
-			{'Tasks'}
-			<h1>Tareas</h1>
+			<h1>Tasks</h1>
+			<button onClick={() => setModal(!modal)}>Add Task</button>
+			{Tasks &&
+				Tasks.map((task: any) => {
+					return (
+						<CardTask
+							priority={task.priority}
+							status={task.status}
+							description={task.description}
+							title={task.title}
+							key={task._uid}
+						/>
+					);
+				})}
+			{modal && (
+				<ModalTask>
+					<button onClick={() => setModal(!modal)}>
+						<span>Close</span>
+					</button>
+				</ModalTask>
+			)}
 		</div>
 	);
 };

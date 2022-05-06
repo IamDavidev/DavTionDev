@@ -1,0 +1,40 @@
+.cardTask {
+	background-color: var(--bg--card--task);
+	width: 280px;
+	padding: 1.5rem 0.5rem;
+	margin: 4rem 0;
+	box-sizing: border-box;
+	border-radius: 5px;
+	& .headerCard {
+		position: relative;
+		& h3 {
+			margin: 0;
+			position: absolute;
+			color: var(--bg);
+			font-size: 16px;
+			top: -2.5rem;
+			background-color: var(--note--todo);
+			padding: 4px 0.5rem;
+			font-weight: bold;
+			border-radius: 4px;
+		}
+	}
+	& div {
+		& p {
+			font-size: 14px;
+		}
+	}
+	& .footerCard {
+		& div {
+			display: flex;
+			gap: 1rem;
+			& button {
+				border: none;
+				padding: 2px 4px;
+				border-radius: 4px;
+				font-weight: bold;
+				font-size: 0.9rem;
+			}
+		}
+	}
+}

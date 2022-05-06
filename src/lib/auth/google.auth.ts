@@ -28,6 +28,7 @@ export const googleAuth = () => {
 				isLoggedIn: true,
 				lastLogin: metadata.lastSignInTime,
 			};
+
 			return setPersistence(authFirebase, browserLocalPersistence).then(() => {
 				userStateClient({
 					...userStateClient,

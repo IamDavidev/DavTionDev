@@ -1,0 +1,27 @@
+.Status__in {
+	background-color: var(--status--inprogress);
+	padding: 2px 4px;
+	border-radius: 4px;
+	color: var(--color--status--inprogress);
+}
+.Status__completed {
+	background: var(--status--completed);
+	color: var(--color--status--completed);
+}
+.Status__not-started {
+	background: var(--status--not--started);
+	color: var(--color--status--not--started);
+}
+
+.Priority__high {
+	background-color: var(--priority--high);
+	color: var(--color--priority--high);
+}
+.Priority__low {
+	background-color: var(--priority--low);
+	color: var(--color--priority--low);
+}
+.Priority__normal {
+	background-color: var(--priority--normal);
+	color: #fff;
+}

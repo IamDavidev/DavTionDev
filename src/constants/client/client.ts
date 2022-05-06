@@ -1,5 +1,7 @@
-import { ApolloClient, InMemoryCache } from '@apollo/client';
-import { taskStateVar, userStateClient } from './state';
+import { ApolloClient, InMemoryCache, makeVar } from '@apollo/client';
+import { taskStateClient, userStateClient } from './state';
+
+const cartItemsVar = makeVar([]);
 
 export const client = new ApolloClient({
 	cache: new InMemoryCache({
@@ -11,9 +13,14 @@ export const client = new ApolloClient({
 							return userStateClient();
 						},
 					},
-					taskDev: {
+					TasksClient: {
 						read() {
-							return taskStateVar();
+							return taskStateClient();
+						},
+					},
+					cartItems: {
+						read() {
+							return cartItemsVar();
 						},
 					},
 				},

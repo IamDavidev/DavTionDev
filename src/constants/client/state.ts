@@ -1,4 +1,4 @@
-import { makeVar } from '@apollo/client';
+import { makeVar, ReactiveVar } from '@apollo/client';
 import {
 	StateTaskInterface,
 	StateUserInterface,
@@ -18,9 +18,10 @@ export const userInitialState: StateUserInterface = {
 	},
 };
 
-export const taskInitialState: StateTaskInterface = {
+export const taskInitialState: any = {
 	tasks: [],
+	selectedTask: {},
 };
 
 export const userStateClient = makeVar(userInitialState);
-export const taskStateVar = makeVar(taskInitialState);
+export const taskStateClient = makeVar(taskInitialState);

@@ -14,7 +14,7 @@ import { _EXISTING_EMAIL } from '../../constants/errors/firebase.err';
 
 export const googleAuth = () => {
 	signInWithPopup(authFirebase, GoogleProvider)
-		.then(response => {
+		.then(async response => {
 			const { displayName, uid, email, photoURL, metadata } = response.user;
 			const credential = GoogleAuthProvider.credentialFromResult(response);
 			const token = credential?.accessToken;

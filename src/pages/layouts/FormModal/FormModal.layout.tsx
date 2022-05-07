@@ -25,9 +25,9 @@ const FormModal = () => {
 			<label>
 				status :
 				<select name='status' id='status'>
-					<option value='inProgress'>In Progress</option>
+					<option value='in-progress'>In Progress</option>
 					<option value='done'>Done</option>
-					<option value='notStarted'>Not Started</option>
+					<option value='not-started'>Not Started</option>
 				</select>
 			</label>
 			<label>

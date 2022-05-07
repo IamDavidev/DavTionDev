@@ -1,0 +1,17 @@
+.tasks {
+	& .headerTasks {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		& .btnAddTask {
+			display: flex;
+			align-items: center;
+			background-color: transparent;
+			border: none;
+			& span {
+				color: var(--text);
+				font-size: 1.2rem;
+			}
+		}
+	}
+}

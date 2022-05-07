@@ -27,7 +27,5 @@ export const githubAuth = () => {
 				user,
 			});
 		})
-		.catch(function (error) {
-			console.log(error);
-		});
+		.catch(function (error) {});
 };

@@ -23,8 +23,9 @@ export type taskType = {
 	_uid: string | null;
 	title: string;
 	createdAt: string;
+	finishedAt?: string | null;
 	description: string;
-	status?: 'in progress' | 'done' | 'not started';
-	priority?: 'low' | 'normal' | 'high';
+	status: 'in progress' | 'done' | 'not started';
+	priority: 'low' | 'normal' | 'high';
 	comments?: [];
 };

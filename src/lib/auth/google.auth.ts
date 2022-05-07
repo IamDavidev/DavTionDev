@@ -43,7 +43,5 @@ export const googleAuth = () => {
 			const email = err.email;
 			if (errorCode === _EXISTING_EMAIL)
 				fetchSignInMethodsForEmail(authFirebase, email);
-
-			console.log('googleAuth', err);
 		});
 };

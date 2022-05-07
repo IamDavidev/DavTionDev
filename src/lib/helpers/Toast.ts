@@ -1,0 +1,22 @@
+import toast from 'react-hot-toast';
+
+export const toastAddTask = () => {
+	const resolver = new Promise(resolve => setTimeout(resolve, 1500));
+	toast.promise(
+		resolver,
+		{
+			loading: 'Loading...',
+			success: 'created',
+			error: 'error',
+		},
+		{
+			style: {
+				backgroundColor: '#4a5570',
+				color: ' #fff',
+			},
+			success: {
+				duration: 2000,
+			},
+		}
+	);
+};

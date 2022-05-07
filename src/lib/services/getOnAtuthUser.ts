@@ -19,9 +19,12 @@ export function getOnAuthUser({ setLoading, setIsLoggedIn }: any) {
 			isLoggedIn: true,
 			lastLogin: metadata.lastSignInTime,
 		};
-
-		setLoading(false);
-		setIsLoggedIn(true);
+		setTimeout(() => {
+			setIsLoggedIn(true);
+			setLoading(false);
+		}, 1000);
+		// setLoading(false);
+		// setIsLoggedIn(true);
 
 		return userStateClient({
 			...userStateClient,

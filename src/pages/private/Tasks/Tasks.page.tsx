@@ -14,30 +14,32 @@ const Tasks: FC = () => {
 	// task
 
 	return (
-		<div>
+		<>
 			<Navbar />
-			<h1>Tasks</h1>
-			<button onClick={() => setModal(!modal)}>Add Task</button>
-			{Tasks &&
-				Tasks.map((task: any) => {
-					return (
-						<CardTask
-							priority={task.priority}
-							status={task.status}
-							description={task.description}
-							title={task.title}
-							key={task._uid}
-						/>
-					);
-				})}
-			{modal && (
-				<ModalTask>
-					<button onClick={() => setModal(!modal)}>
-						<span>Close</span>
-					</button>
-				</ModalTask>
-			)}
-		</div>
+			<div>
+				<h1>Tasks</h1>
+				<button onClick={() => setModal(!modal)}>Add Task</button>
+				{Tasks &&
+					Tasks.map((task: any) => {
+						return (
+							<CardTask
+								priority={task.priority}
+								status={task.status}
+								description={task.description}
+								title={task.title}
+								key={task._uid}
+							/>
+						);
+					})}
+				{modal && (
+					<ModalTask>
+						<button onClick={() => setModal(!modal)}>
+							<span>Close</span>
+						</button>
+					</ModalTask>
+				)}
+			</div>
+		</>
 	);
 };
 

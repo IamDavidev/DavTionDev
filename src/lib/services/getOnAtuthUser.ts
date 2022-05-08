@@ -4,7 +4,15 @@ import { authFirebase } from '../../config/firebase.config';
 import { userStateClient } from '../../constants/client/state';
 import { userStateType } from '../../interfaces/state.interface';
 
-export function getOnAuthUser({ setLoading, setIsLoggedIn }: any) {
+interface propsGetOnAuthUser {
+	setLoading: (loading: boolean) => void;
+	setIsLoggedIn: (isLoggedIn: boolean) => void;
+}
+
+export function getOnAuthUser({
+	setLoading,
+	setIsLoggedIn,
+}: propsGetOnAuthUser) {
 	onAuthStateChanged(authFirebase, (user: any) => {
 		if (!user) return setLoading(false);
 

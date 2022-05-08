@@ -1,9 +1,16 @@
-import { ApolloClient, InMemoryCache, makeVar } from '@apollo/client';
+import {
+	ApolloClient,
+	InMemoryCache,
+	makeVar,
+	NormalizedCacheObject,
+	ReactiveVar,
+} from '@apollo/client';
+
 import { taskStateClient, userStateClient } from './state';
 
-const cartItemsVar = makeVar([]);
+const cartItemsVar: ReactiveVar<never[]> = makeVar([]);
 
-export const client = new ApolloClient({
+export const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({
 	cache: new InMemoryCache({
 		typePolicies: {
 			Query: {

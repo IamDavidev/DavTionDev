@@ -1,1 +1,2 @@
-export const _EXISTING_EMAIL = 'auth/account-exists-with-different-credential';
+export const _EXISTING_EMAIL: string =
+	'auth/account-exists-with-different-credential';

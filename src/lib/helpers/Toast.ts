@@ -2,7 +2,7 @@ import toast from 'react-hot-toast';
 
 export const toastAddTask = () => {
 	const resolver = new Promise(resolve => setTimeout(resolve, 1500));
-	toast.promise(
+	return toast.promise(
 		resolver,
 		{
 			loading: 'Loading...',
@@ -23,7 +23,7 @@ export const toastAddTask = () => {
 };
 
 export const invalidTask = () => {
-	toast.error('Task is not valid ! ', {
+	return toast.error('Task is not valid ! ', {
 		style: {
 			backgroundColor: '#4a5570',
 			color: '#fff',

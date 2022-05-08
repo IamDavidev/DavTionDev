@@ -1,5 +1,5 @@
-import { initializeApp } from 'firebase/app';
-import { getAnalytics } from 'firebase/analytics';
+import { FirebaseApp, initializeApp } from 'firebase/app';
+// import { getAnalytics } from 'firebase/analytics';
 
 import {
 	API_KEY,
@@ -10,9 +10,10 @@ import {
 	PROJECT_ID,
 	STORAGE_BUCKET,
 } from '../constants/firebase/firebase';
-import { getAuth } from 'firebase/auth';
+import { Auth, getAuth } from 'firebase/auth';
+import { firebaseConfigInterface } from '../interfaces/firebase.interface';
 
-export const firebaseconfig = {
+export const firebaseconfig: firebaseConfigInterface = {
 	apiKey: API_KEY,
 	authDomain: AUTH_DOMAIN,
 	projectId: PROJECT_ID,
@@ -22,9 +23,9 @@ export const firebaseconfig = {
 	measurementId: MEASUREMENT_ID,
 };
 
-export const appFirebase = initializeApp(firebaseconfig);
+export const appFirebase: FirebaseApp = initializeApp(firebaseconfig);
 
-export const authFirebase = getAuth();
+export const authFirebase: Auth = getAuth();
 
 // export const analytics = getAnalytics(appFirebase);
 // no funcion si tiene bloqueo de anucios

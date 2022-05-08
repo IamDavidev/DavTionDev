@@ -1,17 +1,20 @@
 import styles from './cardtask.module.css';
 import './card.css';
+import { tasksPropsInterface } from '../../interfaces/task.interface';
+import { validateTitletAsk } from '../../validations/tasks.validation';
 
-type reduceStr = {
-	acc: string;
-	curr: string;
-	index: number;
-};
+const CardTask = ({
+	title,
+	priority,
+	status,
+	description,
+}: tasksPropsInterface) => {
+	const titleValidated = validateTitletAsk(title);
 
-const CardTask = ({ title, priority, status, description }: any) => {
 	return (
 		<article className={styles.cardTask}>
 			<header className={styles.headerCard}>
-				<h3>{title.length > 30 ? `${title.substring(0, 30)}...` : title}</h3>
+				<h3>{titleValidated}</h3>
 			</header>
 			<div className={styles.contentCard}>
 				<span>{description}</span>

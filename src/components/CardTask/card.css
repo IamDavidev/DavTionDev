@@ -1,4 +1,5 @@
-.Status__in-progress {
+.Status__in,
+.progress {
 	background-color: var(--status--inprogress);
 	padding: 2px 4px;
 	border-radius: 4px;
@@ -8,7 +9,8 @@
 	background: var(--status--completed);
 	color: var(--color--status--completed);
 }
-.Status__not-started {
+.Status__not,
+.started {
 	background: var(--status--not--started);
 	color: var(--color--status--not--started);
 }

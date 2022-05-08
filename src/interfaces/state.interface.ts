@@ -17,6 +17,7 @@ export type userStateType = {
 
 export interface StateTaskInterface {
 	tasks: Array<taskType>;
+	selectedTask?: taskType | object;
 }
 
 export type taskType = {

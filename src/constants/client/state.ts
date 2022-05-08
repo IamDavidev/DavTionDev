@@ -18,10 +18,14 @@ export const userInitialState: StateUserInterface = {
 	},
 };
 
-export const taskInitialState: any = {
+export const taskInitialState: StateTaskInterface = {
 	tasks: [],
 	selectedTask: {},
 };
 
-export const userStateClient = makeVar(userInitialState);
-export const taskStateClient = makeVar(taskInitialState);
+export const userStateClient: ReactiveVar<StateUserInterface> =
+	makeVar(userInitialState);
+
+	
+export const taskStateClient: ReactiveVar<StateTaskInterface> =
+	makeVar(taskInitialState);

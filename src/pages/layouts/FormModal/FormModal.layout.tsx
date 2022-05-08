@@ -34,7 +34,7 @@ const FormModal = () => {
 					</select>
 				</label>
 			</div>
-			<label>
+			<label className={styles.contentFinish}>
 				finish date (optional) :
 				<input type='date' name='finishedAt' className={styles.taskFinish} />
 			</label>

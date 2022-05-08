@@ -30,6 +30,8 @@
 			border-radius: 0.5rem;
 			resize: none;
 			color: var(--text);
+			padding: 0.2rem;
+			box-sizing: border-box;
 			&:focus {
 				outline: none;
 			}
@@ -56,6 +58,19 @@
 					outline: none;
 				}
 			}
+		}
+	}
+	& .contentFinish {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		& .taskFinish {
+			border: none;
+			padding: 1rem 2rem;
+			background-color: var(--bg--card--task);
+			color: var(--text);
+			border-radius: 10px;
+			-webkit-date-time-format: none;
 		}
 	}
 	& .btnAddTask {

@@ -22,10 +22,13 @@ function App() {
 			<Helmet>
 				<title>Davtion Dev</title>
 			</Helmet>
-			{loading && <Loading />}
-			<BrowserRouter>
-				{isLogged ? <PrivateRoutes /> : <PublicRoutes />}
-			</BrowserRouter>
+			{loading ? (
+				<Loading />
+			) : (
+				<BrowserRouter>
+					{isLogged ? <PrivateRoutes /> : <PublicRoutes />}
+				</BrowserRouter>
+			)}
 		</div>
 	);
 }

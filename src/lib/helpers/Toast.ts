@@ -13,10 +13,21 @@ export const toastAddTask = () => {
 			style: {
 				backgroundColor: '#4a5570',
 				color: ' #fff',
+				fontWeight: 'bold',
 			},
 			success: {
 				duration: 2000,
 			},
 		}
 	);
+};
+
+export const invalidTask = () => {
+	toast.error('Task is not valid ! ', {
+		style: {
+			backgroundColor: '#4a5570',
+			color: '#fff',
+			fontWeight: 'bold',
+		},
+	});
 };

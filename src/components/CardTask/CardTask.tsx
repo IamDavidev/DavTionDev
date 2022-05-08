@@ -8,24 +8,13 @@ type reduceStr = {
 };
 
 const CardTask = ({ title, priority, status, description }: any) => {
-	const descriptionSplit = description
-		.split(' ')
-		.reduce((acc: string, curr: string, index: number) => {
-			if (index % 20 === 0) {
-				acc += `${curr} \n`;
-			} else {
-				acc += `${curr} `;
-			}
-			return acc;
-		});
-
 	return (
 		<article className={styles.cardTask}>
 			<header className={styles.headerCard}>
 				<h3>{title.length > 30 ? `${title.substring(0, 30)}...` : title}</h3>
 			</header>
 			<div className={styles.contentCard}>
-				<span>{descriptionSplit}</span>
+				<span>{description}</span>
 			</div>
 			<footer className={styles.footerCard}>
 				<div>

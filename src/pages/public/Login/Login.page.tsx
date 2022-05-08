@@ -7,7 +7,7 @@ function Login() {
 	return (
 		<>
 			<Helmet>
-				<title>iniciar sesión | Davtion Dev</title>
+				<title>Sing In | Davtion Dev</title>
 			</Helmet>
 			<div className={styles.Login}>
 				<h2 className={styles.titleSignIn}>Iniciar Sesión</h2>
@@ -17,30 +17,30 @@ function Login() {
 						className={`${styles.provider} ${styles.providerGoogle || ''}`}>
 						<img src='/google.png' alt='Google' />
 						<p>
-							Continuar con <span>Google</span>
+							continue with <span>Google</span>
 						</p>
 					</button>
 				</div>
 				<span className={styles.orLogin}> or</span>
 				<form className={styles.formSignIn}>
 					<label>
-						<input type='text' placeholder='Nombre' required />
+						<input type='text' placeholder='Name' required />
 					</label>
 					<label>
-						<input type='text' placeholder='Email' required />
+						<input type='text' placeholder='Mail' required />
 					</label>
 					<label>
-						<input type='Password' required placeholder='contraseña' />
+						<input type='Password' required placeholder='Password' />
 					</label>
-					<button className='btnSingIn'>Iniciar Sesión</button>
+					<button className='btnSingIn'>Sign IN</button>
 				</form>
 				<p className={styles.forgotPasswordLogin}>
-					<span>¿No tienes una cuenta?</span>
-					<Link to='/cuenta/registro'>Registrate</Link>
+					<span>dont have an accoutnt?</span>
+					<Link to='/cuenta/registro'>Register</Link>
 				</p>
 				<p className={styles.forgotPasswordLogin}>
-					<span>¿Olvidaste tu contraseña?</span>
-					<Link to='/recuperar/contrasena'>Recuperar</Link>
+					<span>forgot password?</span>
+					<Link to='/recuperar/contrasena'>Recover</Link>
 				</p>
 			</div>
 			<div className={styles.bolSign}></div>

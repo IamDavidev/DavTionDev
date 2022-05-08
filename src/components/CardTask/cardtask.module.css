@@ -24,7 +24,7 @@
 		}
 	}
 	& div {
-		overflow: hidden;
+		overflow: auto;
 		& p {
 			font-size: 14px;
 		}

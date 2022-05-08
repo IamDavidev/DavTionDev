@@ -9,6 +9,7 @@ import ModalTask from '../../layouts/ModalTask/modalTask.layout';
 import { GET_TASKS } from '../../../gql/getTasks.gql';
 import IconOpen from '../../../components/icons/IconOpen';
 import { Toaster } from 'react-hot-toast';
+import { Helmet } from 'react-helmet';
 
 const Tasks: FC = () => {
 	const [modal, setModal] = useState(false);
@@ -19,6 +20,9 @@ const Tasks: FC = () => {
 
 	return (
 		<>
+			<Helmet>
+				<title>tasks | Davtion Dev</title>
+			</Helmet>
 			<Navbar />
 			<div className={styles.tasks}>
 				<header className={styles.headerTasks}>

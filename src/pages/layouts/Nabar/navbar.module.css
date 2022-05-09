@@ -3,10 +3,17 @@
 	width: 100%;
 	justify-content: space-between;
 	align-items: center;
+	padding: 1rem 2rem;
+	box-sizing: border-box;
+	background-color: var(--bg--card--task);
+	border-radius: 0.7rem;
 	& .userNav {
 		display: flex;
 		align-items: center;
 		gap: 1rem;
+		text-decoration: none;
+		color: var(--text);
+		font-weight: bold;
 		& img {
 			width: 2rem;
 			height: 2rem;

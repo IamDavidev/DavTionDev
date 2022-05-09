@@ -10,8 +10,10 @@ import { GET_TASKS } from '../../../gql/getTasks.gql';
 import IconOpen from '../../../components/icons/IconOpen';
 import { Toaster } from 'react-hot-toast';
 import { Helmet } from 'react-helmet';
+import { IconTask } from '../../../components/icons/IconTask';
 
 const Tasks: FC = () => {
+	console.log('~~tasks');
 	const [modal, setModal] = useState(false);
 	const { data } = useQuery(GET_TASKS);
 
@@ -26,7 +28,10 @@ const Tasks: FC = () => {
 			<Navbar />
 			<div className={styles.tasks}>
 				<header className={styles.headerTasks}>
-					<h1>Tasks</h1>
+					<div className={styles.titleTask}>
+						<h1>Tasks</h1>
+						<IconTask width={30} color='#d63691' />
+					</div>
 					<button
 						onClick={() => setModal(!modal)}
 						className={styles.btnAddTask}>

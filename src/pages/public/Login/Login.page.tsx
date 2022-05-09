@@ -4,6 +4,7 @@ import styles from './login.module.css';
 import { googleAuth } from '../../../lib/auth/google.auth';
 
 function Login() {
+	console.log('~~login');
 	return (
 		<>
 			<Helmet>

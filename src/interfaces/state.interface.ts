@@ -24,7 +24,7 @@ export type taskType = {
 	_uid: string | null;
 	title: string;
 	createdAt: string;
-	finishedAt?: string | null;
+	finishedAt: string | 0;
 	description: string;
 	status: 'in progress' | 'done' | 'not started';
 	priority: 'low' | 'normal' | 'high';

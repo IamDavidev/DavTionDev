@@ -22,8 +22,8 @@ export const toastAddTask = () => {
 	);
 };
 
-export const invalidTask = () => {
-	return toast.error('Task is not valid ! ', {
+export const toastInvalidTask = (invalid: string) => {
+	return toast.error(`{ ${invalid} }`, {
 		style: {
 			backgroundColor: '#4a5570',
 			color: '#fff',

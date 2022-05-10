@@ -1,4 +1,4 @@
-import { FC, lazy } from 'react';
+import { FC, lazy, Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 // import Profile from '../pages/private/Profile/Profile.page';
 // import Tasks from '../pages/private/Tasks/Tasks.page';

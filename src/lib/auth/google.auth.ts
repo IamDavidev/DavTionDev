@@ -10,7 +10,7 @@ import { GoogleProvider } from '../providers/firebase.providers';
 import { authFirebase } from '../../config/firebase.config';
 import { userStateType } from '../../interfaces/state.interface';
 import { userStateClient } from '../../constants/client/state';
-import { _EXISTING_EMAIL } from '../../constants/errors/firebase.err';
+import { _EXISTING_EMAIL } from '../../constants/firebase/firebase.err';
 
 export const googleAuth = (): void => {
 	signInWithPopup(authFirebase, GoogleProvider)

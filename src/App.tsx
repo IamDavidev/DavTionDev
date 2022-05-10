@@ -1,8 +1,7 @@
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter } from 'react-router-dom';
-
-import { getOnAuthUser } from './lib/services/getOnAtuthUser';
+import { getOnAuthUser } from './lib/auth/getOnAtuthUser';
 
 // routes
 import Loading from './pages/layouts/Loading/Loading.layout';
@@ -25,9 +24,11 @@ function App() {
 			{loading ? (
 				<Loading />
 			) : (
-				<BrowserRouter>
-					{isLogged ? <PrivateRoutes /> : <PublicRoutes />}
-				</BrowserRouter>
+				<Suspense fallback={<p>Loading ...</p>}>
+					<BrowserRouter>
+						{isLogged ? <PrivateRoutes /> : <PublicRoutes />}
+					</BrowserRouter>
+				</Suspense>
 			)}
 		</div>
 	);

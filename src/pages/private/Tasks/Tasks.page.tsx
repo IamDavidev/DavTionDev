@@ -7,10 +7,10 @@ import Navbar from '../../layouts/Nabar/Navbar.layout';
 import CardTask from '../../../components/CardTask/CardTask';
 import ModalTask from '../../layouts/ModalTask/modalTask.layout';
 import { GET_TASKS } from '../../../gql/getTasks.gql';
-import IconOpen from '../../../components/icons/IconOpen';
+import IconOpen from '../../../components/icons/Open.icon';
 import { Toaster } from 'react-hot-toast';
 import { Helmet } from 'react-helmet';
-import { IconTask } from '../../../components/icons/IconTask';
+import { IconTask } from '../../../components/icons/task.icon';
 
 const Tasks: FC = () => {
 	console.log('~~tasks');
@@ -26,7 +26,7 @@ const Tasks: FC = () => {
 				<title>tasks | Davtion Dev</title>
 			</Helmet>
 			<Navbar />
-			<div className={styles.tasks}>
+			<>
 				<header className={styles.headerTasks}>
 					<div className={styles.titleTask}>
 						<h1>Tasks</h1>
@@ -57,7 +57,7 @@ const Tasks: FC = () => {
 					<Toaster position='bottom-left' containerClassName={styles.toast} />
 				</footer>
 				{modal && <ModalTask closeModal={setModal} modal={modal} />}
-			</div>
+			</>
 		</>
 	);
 };

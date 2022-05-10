@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@apollo/client': ^3.6.2
   '@types/react': 18.0.0
+  '@types/react-copy-to-clipboard': ^5.0.2
   '@types/react-dom': 18.0.0
   '@types/react-helmet': ^6.1.5
   '@types/uuid': ^8.3.4
@@ -15,6 +16,7 @@ specifiers:
   postcss-cli: ^9.1.0
   postcss-nesting: ^10.1.4
   react: 18.0.0
+  react-copy-to-clipboard: ^5.1.0
   react-dom: 18.0.0
   react-helmet: ^6.1.0
   react-hot-toast: 2.2.0
@@ -29,6 +31,7 @@ dependencies:
   firebase: 9.7.0
   graphql: 16.4.0
   react: 18.0.0
+  react-copy-to-clipboard: 5.1.0_react@18.0.0
   react-dom: 18.0.0_react@18.0.0
   react-helmet: 6.1.0_react@18.0.0
   react-hot-toast: 2.2.0_zpnidt7m3osuk7shl3s4oenomq
@@ -37,6 +40,7 @@ dependencies:
 
 devDependencies:
   '@types/react': 18.0.0
+  '@types/react-copy-to-clipboard': 5.0.2
   '@types/react-dom': 18.0.0
   '@types/react-helmet': 6.1.5
   '@types/uuid': 8.3.4
@@ -974,6 +978,12 @@ packages:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
     dev: true
 
+  /@types/react-copy-to-clipboard/5.0.2:
+    resolution: {integrity: sha512-O29AThfxrkUFRsZXjfSWR2yaWo0ppB1yLEnHA+Oh24oNetjBAwTDu1PmolIqdJKzsZiO4J1jn6R6TmO96uBvGg==}
+    dependencies:
+      '@types/react': 18.0.8
+    dev: true
+
   /@types/react-dom/18.0.0:
     resolution: {integrity: sha512-49897Y0UiCGmxZqpC8Blrf6meL8QUla6eb+BBhn69dTXlmuOlzkfr7HHY/O8J25e1lTUMs+YYxSlVDAaGHCOLg==}
     dependencies:
@@ -1237,6 +1247,12 @@ packages:
     dependencies:
       safe-buffer: 5.1.2
     dev: true
+
+  /copy-to-clipboard/3.3.1:
+    resolution: {integrity: sha512-i13qo6kIHTTpCm8/Wup+0b1mVWETvu2kIMzKoK8FpkLkFxlt0znUAHcMzox+T8sPlqtZXq3CulEjQHsYiGFJUw==}
+    dependencies:
+      toggle-selection: 1.0.6
+    dev: false
 
   /core-js/3.6.5:
     resolution: {integrity: sha512-vZVEEwZoIsI+vPEuoF9Iqf5H7/M3eeQqWlQnYa8FSKKePuYTf5MWnxb5SDAzCa60b3JBRS5g9b+Dq7b1y/RCrA==}
@@ -2314,6 +2330,16 @@ packages:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
     dev: true
 
+  /react-copy-to-clipboard/5.1.0_react@18.0.0:
+    resolution: {integrity: sha512-k61RsNgAayIJNoy9yDsYzDe/yAZAzEbEgcz3DZMhF686LEyukcE1hzurxe85JandPUG+yTfGVFzuEw3xt8WP/A==}
+    peerDependencies:
+      react: ^15.3.0 || 16 || 17 || 18
+    dependencies:
+      copy-to-clipboard: 3.3.1
+      prop-types: 15.8.1
+      react: 18.0.0
+    dev: false
+
   /react-dom/18.0.0_react@18.0.0:
     resolution: {integrity: sha512-XqX7uzmFo0pUceWFCt7Gff6IyIMzFUn7QMZrbrQfGxtaxXZIcGQzoNpRLE3fQLnS4XzLLPMZX2T9TRcSrasicw==}
     peerDependencies:
@@ -2617,6 +2643,10 @@ packages:
     dependencies:
       is-number: 7.0.0
     dev: true
+
+  /toggle-selection/1.0.6:
+    resolution: {integrity: sha1-bkWxJj8gF/oKzH2J14sVuL932jI=}
+    dev: false
 
   /tr46/0.0.3:
     resolution: {integrity: sha1-gYT9NH2snNwYWZLzpmIuFLnZq2o=}

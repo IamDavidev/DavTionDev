@@ -31,3 +31,14 @@ export const toastInvalidTask = (invalid: string) => {
 		},
 	});
 };
+
+export const toastCopyToClipboard = () => {
+	return toast.success('Copied to clipboard', {
+		style: {
+			backgroundColor: '#4a5570',
+			color: '#f00',
+			fontWeight: 'bold',
+		},
+		duration: 500,
+	});
+};

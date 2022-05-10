@@ -1,7 +1,7 @@
 import { GithubAuthProvider, signInWithPopup } from 'firebase/auth';
 import { authFirebase } from '../../config/firebase.config';
 import { userStateClient } from '../../constants/client/state';
-import { _EXISTING_EMAIL } from '../../constants/errors/firebase.err';
+import { _EXISTING_EMAIL } from '../../constants/firebase/firebase.err';
 import { userStateType } from '../../interfaces/state.interface';
 import { GithubProvider } from '../providers/firebase.providers';
 

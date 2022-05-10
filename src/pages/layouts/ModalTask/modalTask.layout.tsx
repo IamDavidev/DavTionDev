@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import IconClose from '../../../components/icons/IconClose';
+import IconClose from '../../../components/icons/Close.icon';
 import FormModal from '../FormModal/FormModal.layout';
 import styles from './modal.module.css';
 

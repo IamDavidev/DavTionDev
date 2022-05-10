@@ -1,14 +1,10 @@
 import {
 	ApolloClient,
 	InMemoryCache,
-	makeVar,
 	NormalizedCacheObject,
-	ReactiveVar,
 } from '@apollo/client';
 
-import { taskStateClient, userStateClient } from './state';
-
-const cartItemsVar: ReactiveVar<never[]> = makeVar([]);
+import { taskStateClient, userStateClient } from '../constants/client/state';
 
 export const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({
 	cache: new InMemoryCache({
@@ -23,11 +19,6 @@ export const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({
 					TasksClient: {
 						read() {
 							return taskStateClient();
-						},
-					},
-					cartItems: {
-						read() {
-							return cartItemsVar();
 						},
 					},
 				},

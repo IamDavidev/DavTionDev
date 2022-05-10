@@ -2,6 +2,7 @@ import styles from './cardtask.module.css';
 import './card.css';
 import { tasksPropsInterface } from '../../interfaces/task.interface';
 import { validateTitletAsk } from '../../validations/tasks.validation';
+import ButtonCopy from '../buttonCopy/ButtonCopy';
 
 const CardTask = ({
 	title,
@@ -18,6 +19,7 @@ const CardTask = ({
 			</header>
 			<div className={styles.contentCard}>
 				<span>{description}</span>
+				<ButtonCopy textCopy={description} />
 			</div>
 			<footer className={styles.footerCard}>
 				<div>

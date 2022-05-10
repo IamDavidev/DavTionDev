@@ -1,9 +1,9 @@
 [build]
-    command = "npm run buildckear"
+    command = "npm run build"
     published = "/dist"  
     base = "/" 
 
 [[redirects]]
-    from = "/*" # todos los paths
+    from = "/*" 
     to = "/index.html" 
     status = 200 

@@ -1,4 +1,6 @@
-const IconClose = ({ width, color }: any) => {
+import { IconPropsInterface } from '../../interfaces/icon.interface';
+
+const IconClose = ({ width, color }: IconPropsInterface) => {
 	return (
 		<svg
 			className='w-6 h-6'

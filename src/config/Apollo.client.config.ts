@@ -4,7 +4,10 @@ import {
 	NormalizedCacheObject,
 } from '@apollo/client';
 
-import { taskStateClient, userStateClient } from '../constants/client/state';
+import {
+	taskStateClient,
+	userStateClient,
+} from '../constants/client/client.state';
 
 export const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({
 	cache: new InMemoryCache({

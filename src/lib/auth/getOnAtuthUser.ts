@@ -1,7 +1,7 @@
 import { onAuthStateChanged } from 'firebase/auth';
 import {} from 'react';
 import { authFirebase } from '../../config/firebase.config';
-import { userStateClient } from '../../constants/client/state';
+import { userStateClient } from '../../constants/client/client.state';
 import { userStateType } from '../../interfaces/state.interface';
 
 interface propsGetOnAuthUser {
@@ -9,6 +9,7 @@ interface propsGetOnAuthUser {
 	setIsLoggedIn: (isLoggedIn: boolean) => void;
 }
 
+// funcion for get the user on auth state changed
 export function getOnAuthUser({
 	setLoading,
 	setIsLoggedIn,

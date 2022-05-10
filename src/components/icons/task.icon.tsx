@@ -1,10 +1,6 @@
-// @flow
-import * as React from 'react';
-type Props = {
-	width: number;
-	color: string;
-};
-export const IconTask = ({ width, color }: Props) => {
+import { IconPropsInterface } from '../../interfaces/icon.interface';
+
+export const IconTask = ({ width, color }: IconPropsInterface) => {
 	return (
 		<>
 			<svg

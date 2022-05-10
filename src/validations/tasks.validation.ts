@@ -11,6 +11,7 @@ type returnIsValidTask = {
 	isValid: boolean;
 	message: string;
 };
+
 const formatNoValidTask = (i: string) => {
 	return {
 		isValid: false,

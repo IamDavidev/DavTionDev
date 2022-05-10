@@ -1,8 +1,6 @@
-type Props = {
-	width: number;
-	color: string;
-};
-export const CopyIcon = ({ width, color }: Props) => {
+import { IconPropsInterface } from '../../interfaces/icon.interface';
+
+export const CopyIcon = ({ width, color }: IconPropsInterface) => {
 	return (
 		<>
 			<svg

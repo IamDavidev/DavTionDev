@@ -3,14 +3,16 @@ import { FC, useState } from 'react';
 
 import styles from './task.module.css';
 
-import Navbar from '../../layouts/Nabar/Navbar.layout';
-import CardTask from '../../../components/CardTask/CardTask';
-import ModalTask from '../../layouts/ModalTask/modalTask.layout';
 import { GET_TASKS } from '../../../gql/getTasks.gql';
-import IconOpen from '../../../components/icons/Open.icon';
-import { Toaster } from 'react-hot-toast';
 import { Helmet } from 'react-helmet';
 import { IconTask } from '../../../components/icons/task.icon';
+import { Toaster } from 'react-hot-toast';
+
+import Navbar from '../../layouts/Nabar/Navbar.layout';
+import CardTask from '../../../components/CardTask/CardTask';
+
+import ModalTask from '../../layouts/ModalTask/modalTask.layout';
+import IconOpen from '../../../components/icons/Open.icon';
 
 const Tasks: FC = () => {
 	console.log('~~tasks');

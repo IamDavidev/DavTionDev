@@ -4,9 +4,10 @@ import { BrowserRouter } from 'react-router-dom';
 import { getOnAuthUser } from './lib/auth/getOnAtuthUser';
 
 // routes
-import Loading from './pages/layouts/Loading/Loading.layout';
+import Loading from './components/LoadingDavtion/Loading.layout';
 import PrivateRoutes from './routes/Private.routes';
 import PublicRoutes from './routes/Public.routes';
+import LoadingLazy from './components/LoadingLazy/LoadingLazy';
 
 function App() {
 	const [isLogged, setIsLogged] = useState(false);
@@ -24,7 +25,7 @@ function App() {
 			{loading ? (
 				<Loading />
 			) : (
-				<Suspense fallback={<p>Loading ...</p>}>
+				<Suspense fallback={<LoadingLazy />}>
 					<BrowserRouter>
 						{isLogged ? <PrivateRoutes /> : <PublicRoutes />}
 					</BrowserRouter>

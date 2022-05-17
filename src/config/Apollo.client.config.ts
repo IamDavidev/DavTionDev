@@ -9,24 +9,27 @@ import {
 	userStateClient,
 } from '../constants/client/client.state';
 
-export const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({
-	cache: new InMemoryCache({
-		typePolicies: {
-			Query: {
-				fields: {
-					UserClient: {
-						read() {
-							return userStateClient();
-						},
+export const cache = new InMemoryCache({
+	typePolicies: {
+		Query: {
+			fields: {
+				UserClient: {
+					read() {
+						return userStateClient();
 					},
-					TasksClient: {
-						read() {
-							return taskStateClient();
-						},
+				},
+				TasksClient: {
+					read() {
+						return taskStateClient();
 					},
 				},
 			},
 		},
-	}),
+	},
+});
+
+export const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({
+	uri: 'http://localhost:4000/graphql',
+	cache,
 	connectToDevTools: true,
 });
